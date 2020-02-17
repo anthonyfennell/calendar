@@ -18,12 +18,6 @@ extension Date {
         self.init(timeInterval:0, since:calendar.date(from: dateComponent)!)
     }
     
-    init?(foo: String, bar: String) {
-        //self.init()
-        
-        self = Date()
-    }
-    
     fileprivate var calender: Calendar {
         return Calendar.current
     }
