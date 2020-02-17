@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CalendarCollectionViewCell" customModule="Calendars" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="68" height="51"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6H-Kf-BJR" userLabel="dayLabel">
+                    <rect key="frame" x="14" y="5.5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Iml-Rm-ZRY"/>
+                        <constraint firstAttribute="height" constant="40" id="rOj-jM-mG2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njl-Mo-buy">
+                    <rect key="frame" x="21.5" y="31.5" width="25" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lWE-5q-NIW">
+                    <rect key="frame" x="30" y="37.5" width="8" height="8"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="8" id="5b6-JR-ydA"/>
+                        <constraint firstAttribute="height" constant="8" id="kfW-Oo-ud0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="x6H-Kf-BJR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="AOG-wW-pO8"/>
+                <constraint firstItem="x6H-Kf-BJR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="LZQ-54-8nx"/>
+                <constraint firstItem="lWE-5q-NIW" firstAttribute="centerX" secondItem="x6H-Kf-BJR" secondAttribute="centerX" id="Lop-3J-Z9b"/>
+                <constraint firstItem="lWE-5q-NIW" firstAttribute="top" secondItem="x6H-Kf-BJR" secondAttribute="bottom" constant="-8" id="TRi-qr-XiL"/>
+                <constraint firstItem="njl-Mo-buy" firstAttribute="top" secondItem="x6H-Kf-BJR" secondAttribute="bottom" constant="-14" id="hhg-Xh-NOX"/>
+                <constraint firstItem="njl-Mo-buy" firstAttribute="centerX" secondItem="x6H-Kf-BJR" secondAttribute="centerX" id="kis-Lj-74o"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="dayLabel" destination="x6H-Kf-BJR" id="kgJ-eX-5vI"/>
+                <outlet property="dueDateLabel" destination="njl-Mo-buy" id="QkA-v7-OC2"/>
+                <outlet property="scheduledPaymentView" destination="lWE-5q-NIW" id="Dfl-QK-gvD"/>
+            </connections>
+            <point key="canvasLocation" x="504" y="380.95952023988008"/>
+        </view>
+    </objects>
+</document>
